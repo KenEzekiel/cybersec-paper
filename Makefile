@@ -18,19 +18,19 @@ thesis:
 	@mkdir -p output
 	@mkdir -p build
 	@latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf -bibtex -outdir=../build -cd src/$(THESIS_INPUT)
-	@cp build/$(THESIS_OUTPUT) output
+	@copy build/$(THESIS_OUTPUT) output
 
 yudisium:
 	@mkdir -p output
 	@mkdir -p build
 	@latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf -bibtex -outdir=../build -cd src/$(YUDISIUM_INPUT)
-	@cp build/$(YUDISIUM_OUTPUT) output
+	@copy build/$(YUDISIUM_OUTPUT) output
 
 paper:
 	@mkdir -p output
 	@mkdir -p build
 	@latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf -bibtex -outdir=../build -cd src/$(PAPER_INPUT)
-	@cp build/$(PAPER_OUTPUT) output
+	@copy build/$(PAPER_OUTPUT) output
 
 format:
 	@latexindent -l -s -sl -w $(TEXFILES) $(STYFILES) $(BIBFILES)
