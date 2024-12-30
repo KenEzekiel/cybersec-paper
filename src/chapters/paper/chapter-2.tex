@@ -1,11 +1,48 @@
-\section{Ease of Use}
+\section{Literature Review}
+\label{sec:literature-review}
 
-\subsection{Maintaining the Integrity of the Specifications}
+Many papers have been published to analyze various methods for behavioral authentication. This section reviews the existing literature on behavioral authentication techniques, their accuracy, their associated challenges, and their potential when integrated into a multifactor framework.
 
-The IEEEtran class file is used to format your paper and style the text. All margins,
-column widths, line spaces, and text fonts are prescribed; please do not
-alter them. You may note peculiarities. For example, the head margin
-measures proportionately more than is customary. This measurement
-and others are deliberate, using specifications that anticipate your paper
-as one part of the entire proceedings, and not as an independent document.
-Please do not revise any of the current designations.
+\subsection{Mouse Movement Feature Using Coordinates and Speed}
+
+\parencite{21_Mouse_Coordinate_Speed} This study presents a prototype for behavioral biometric systems using random mouse movements. The proposed system consists of three modules: a data capture module for recording mouse events, a feature extraction module to process raw data into meaningful user-specific features, and a classifier module to match extracted features against a database for user identification.
+
+During the experiment, participants interacted with a graphical user interface (GUI) designed to randomize button locations, ensuring unpredictable mouse movement patterns. The system recorded the x and y coordinates of mouse clicks and associated timestamps. Extracted features included movement speed, acceleration, deviation, and angles of deviation, which were used to build unique user profiles.
+
+The identification process employed a leave-one-out method for training and testing, using Euclidean distance as the metric for matching. With 30 data samples collected from five users, the system achieved an identification success rate of 46.67\% (14 matches). While promising as a proof of concept, the prototype demonstrates the challenges of behavioral biometrics, particularly in achieving high accuracy across varied conditions. Nonetheless, it highlights the potential of mouse movement as a non-intrusive and low-cost authentication mechanism suitable for integration into multifactor frameworks.
+
+\subsection{Mouse Dynamics and Deep Neural Networks}
+
+\parencite{20_Mouse_Coordinate} This study explores the use of deep neural networks (DNNs) for user authentication based on mouse dynamics, highlighting their potential to overcome limitations of traditional methods that rely on handcrafted features. The research compares multiple architectures, including 1D-CNN, 2D-CNN, LSTM, and hybrid CNN-LSTM models, with a support vector machine (SVM) baseline.
+
+The study employs datasets like Balabit and TWOS, which contain mouse movement logs from different user interactions. Preprocessing techniques, such as sequence length adjustment and normalization, were critical for transforming raw mouse data into suitable input formats for the models. The 2D-CNN model emerged as the most effective, outperforming other architectures by leveraging transfer learning and capturing spatial features. The hybrid CNN-LSTM model also demonstrated promise, particularly for tasks requiring temporal and spatial analysis.
+
+To address challenges like class imbalance and the need for low false rejection rates (FRR), the authors implemented a weighted loss function, improving performance in practical scenarios. The study also incorporates Layer-Wise Relevance Propagation (LRP) to visualize which mouse movements influence the model's decisions, enhancing interpretability.
+
+Overall, the research establishes deep learning-based mouse dynamics as a viable behavioral biometric for static authentication systems, with the potential for integration into multifactor frameworks. However, issues such as sensitivity to screen resolution and sequence variability remain areas for further investigation.
+
+\subsection{Typing Style Using Text Length}
+
+\parencite{30_Typing_Textlength} This study introduces a robust approach to continuous user authentication (CUA) through keystroke dynamics, leveraging a novel Recurrent Confidence Model (R-RCM) and ensemble learning techniques. The system authenticates users based on each keystroke action, ensuring real-time monitoring without the need for action blocks, thereby reducing the potential for intruder activity.
+
+The proposed two-phase methodology integrates baseline classifiers (SVM, ANN, and XGBoost) with a dynamic recurrent model. The classifiers generate confidence scores for each action, which are combined using ensemble techniques like dynamic classifier selection (DCS) and weighted classifier fusion (WCF). These scores inform the R-RCM, which dynamically adjusts user confidence based on individual actions. A unique dual-threshold system—alert and final thresholds—enables rapid detection and lockout of imposter users while tolerating slight deviations in genuine user behavior.
+
+Experimental validation employed datasets from 75 users, incorporating both fixed and free-text keystroke inputs. Performance was measured using Average Number of Genuine Actions (ANGA) and Average Number of Imposter Actions (ANIA). Results demonstrated significant improvements in detecting imposters quickly (low ANIA) while maintaining high accuracy for genuine users (high ANGA). The ensemble-based personalized configuration achieved the best results, highlighting the system's adaptability to user-specific typing patterns.
+
+This research advances the field of behavioral biometrics by addressing limitations in prior block-based CUA systems, paving the way for seamless integration into high-security environments.
+
+\subsection{Typing Style Using Keystrokes Data with PUC}
+\label{subsec:typing-style-using-keystrokes-data}
+
+\parencite{22_Keystroke} identify a person based on the person's typing behavior.
+It used data of 46 students with at least 500 keystrokes each.
+The paper found that using Pairwise User Coupling (PUC) with bottom-up tree structure based scheme works the best for identification.
+It also observed that there is a higher accuracy when in the case of typing with both hands (89.7\%) compared to typing with one hand.
+Also the paper shown that the duration of features are more stable than a combination of latency and duration features.
+
+
+\subsection{Phone Usage}
+
+\parencite{17_Phone} This study introduces Safeguard, a smartphone user reauthentication system utilizing sliding dynamics and pressure intensity as behavioral biometrics. By analyzing unique sliding patterns and on-screen pressure metrics, Safeguard employs Support Vector Machines (SVM) to achieve high accuracy with minimal system overhead. The system operates transparently, requiring only 15-20 sliding gestures to verify users with a False Acceptance Rate (FAR) of 0.03\% and a False Rejection Rate (FRR) of 0.05\%.
+
+Data from 60 users were collected under various scenarios, including different apps and motion statuses, demonstrating the system's robustness and adaptability. Safeguard outperforms existing methods in accuracy and resistance to adversarial imitation. It is a scalable, hardware-independent solution suitable for real-time user reauthentication in diverse smartphone environments.
