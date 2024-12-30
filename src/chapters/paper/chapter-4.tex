@@ -3,16 +3,40 @@
 To address the limitations and challenges identified in \ref{sec:problem-analysis}. One possibility of solution is to integrate multiple behavioral authentication modalities into a unified multi-factor behavior authentication framework.
 
 The key idea is to leverage the complementary nature of different behavioral traits to mitigate the limitations of individual modalities. By aggregating and analyzing data from multiple sources. A more robust authentication model that is more resilient to variability and adversarial attacks may be built.
-% Would be nice to throw in some examples from chapter-2
+% TODO: Would be nice to throw in some examples from chapter-2
 
 \subsection{System Workflow}
 The proposed solution works by the following steps
-% Explain the workflow
+% TODO: Explain the workflow
 
 \subsection{Advantages of the Proposed Solution}
 
-% Explain the advantage
+The proposed solution has several advantages over traditional authentication methods and single-factor behavioral authentication systems. Some of the key benefits include:
+
+\begin{itemize}
+    \item \textbf{Enhanced Accuracy and Reliability}
+    Integration of multiple behavioral modalities will enhance authentication accuracy. The multiple modalities compensates the variability of individual traits, improving the overall robustness of the system.
+
+    \item \textbf{Resiliency Towards Dynamic Behavioral Data}
+    The multi-factor framework can adapt to dynamic behavioral data by cross-verifying multiple modalities. This reduces the impact of external factors on authentication accuracy. The multi-factor nature may also accomodate behavioral drift over time by switching to the more stable factors while the unstable factors are adjusted.
+    
+    \item \textbf{Improved Usability}
+    With the increase of accuracy, reliability, and resilience, the proposed solution will reduce false rejections and the need for frequent secondary authentication prompts. This will enhance the user experience and satisfaction.
+
+\end{itemize}
 
 \subsection{Issues of the Proposed Solution}
 
-% Explain the disadvantage
+However, the proposed solution is not without its challenges. Some of the key issues that need to be addressed include:
+
+\begin{itemize}
+    \item \textbf{Complexity and Overhead}
+    The proposed solution of an MFBA will require computational resources to process and analyze data from multiple sources. This will increase the system's complexity and overhead, potentially affecting performance and scalability. Furthermore, integration of multiple modalities may introduce interoperability issues and compatibility concerns both during development and production.
+
+    \item \textbf{Data Privacy and Security}
+    The collection of many user data for the proposed solution may raise privacy concerns. The more data collected, the more obtrusive the system may become for the user. Additionally, the processing of sensitive behavioral data may introduce further security issues when a breach occurs.
+    
+    \item \textbf{Scalability}
+    Within the proposed solution, the high complexity of an MFBA system may limit its scalability and generalization. The more complex the system gets, the harder it will be to implement on a broader scale. This may limit the adoption of the proposed solution in real-world applications.
+
+\end{itemize}
