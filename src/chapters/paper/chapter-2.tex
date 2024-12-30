@@ -40,10 +40,11 @@ Also the paper shown that the duration of features are more stable than a combin
 
 \parencite{4_Continuous_Authentication}
 This study presents a continuous authentication system based on behavioral biometrics, leveraging keystroke dynamics and mouse movements. 
+It uses a robust recurrent confidence model (R-RCM) to lockout user when anomaly behavior is detected, while also keeps into account when sometimes legitimate user behavior is deviating from the normal behavior.
 
 
 \subsection{Phone Usage}
 
-\parencite{17_Phone} This study introduces Safeguard, a smartphone user reauthentication system utilizing sliding dynamics and pressure intensity as behavioral biometrics. By analyzing unique sliding patterns and on-screen pressure metrics, Safeguard employs Support Vector Machines (SVM) to achieve high accuracy with minimal system overhead. The system operates transparently, requiring only 15-20 sliding gestures to verify users with a False Acceptance Rate (FAR) of 0.03\% and a False Rejection Rate (FRR) of 0.05\%.
+\parencite{17_Phone} This study introduces Safeguard, a smartphone user re-authentication system utilizing sliding dynamics and pressure intensity as behavioral biometrics. By analyzing unique sliding patterns and on-screen pressure metrics, Safeguard employs Support Vector Machines (SVM) to achieve high accuracy with minimal system overhead. The system operates transparently, requiring only 15-20 sliding gestures to verify users with a False Acceptance Rate (FAR) of 0.03\% and a False Rejection Rate (FRR) of 0.05\%.
 
 Data from 60 users were collected under various scenarios, including different apps and motion statuses, demonstrating the system's robustness and adaptability. Safeguard outperforms existing methods in accuracy and resistance to adversarial imitation. It is a scalable, hardware-independent solution suitable for real-time user reauthentication in diverse smartphone environments.

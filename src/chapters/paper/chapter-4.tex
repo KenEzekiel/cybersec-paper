@@ -6,8 +6,16 @@ The key idea is to leverage the complementary nature of different behavioral tra
 % TODO: Would be nice to throw in some examples from chapter-2
 
 \subsection{System Workflow}
-The proposed solution works by the following steps
-% TODO: Explain the workflow
+% TODO: This is based on sourceless ChatGPT hallucinations instead of section 2, revise is possible 
+The proposed MFBA framework is to integrate three primary behavioral modalities: mouse movement, keystroke dynamics, and phone usage behavior. These modalities were chosen due to their complementary nature in authentication.
+
+Mouse movement offer a rich source of behavioral data, characterized by features such as speed, acceleration, movement trajectories, and click patterns. Mouse movement is less prone to situational variability compared to other modalities, offering a stable baseline for authentication.
+
+Keystroke dynamics focuses on timing patterns in how users type, including features such as dwell time, flight time, and overall typing rhythm. While keystroke dynamics may vary under certain circumstances, when combined with mouse dynamics they may offer strong discriminative power as the two modalities often operate concurrently in desktop usage scenarios. The fusion of these data sources enables real-time cross verification behaviors. Thus, significantly reduces the likelihood of false acceptances or rejections.
+
+Phone usage behavior introduces an entirely new dimension to authentication. This modality leverages the amount of time the user spends on the device. The inclusion of phone usage behavior ensures that the MFBA framework remains effective across diverse device ecosystems.
+
+Data from these modalities are then aggregated through a contextual weighting system that dynamically adjusts the importance of each modality based on the user's current situation. For example, during a break, phone behavior may receive a higher weight, whereas in working scenarios, mouse and keystroke dynamics may dominate the authentication process. This adaptive weighting ensures the system remains versatile and responsive to changes in user context, behavioral variability, and environmental conditions.
 
 \subsection{Advantages of the Proposed Solution}
 
