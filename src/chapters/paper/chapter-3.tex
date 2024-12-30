@@ -6,15 +6,31 @@ Behavioral authentication, while promising as a user-friendly and secure alterna
 \subsection{Accuracy and Reliability}
 As outlined in Section \ref{sec:literature-review}, behavioral analysis have relatively less accurate detections when compared to traditional methods such as passwords and PINs. Furthermore, Behavioral data is often noisier than traditional credential-based inputs. Environmental factors, such as changes in device sensitivity, network latency, or external distrubances, can further exacerbate detection innacuracies.
 
-For example as shown in \ref{subsec:typing-style-using-keystrokes-data}, 
-
-There is many factor that come into play 
+The reason for this accuracy is the many factor that come into play when authenticating with behavioral data. Such are the case for the results of the studies found in chapter 2. For example, the study in \ref{subsec:mouse-movement-feature-using-coordinates-and-speed} shows that the system only achieved a 46.67\% identification success rate with 30 samples from five users. This is a very low accuracy rate, and it is not suitable for a real-world application. Other examples include the studies like \parencite{22_Keystroke} and \parencite{17_Phone} shows that behavioral detection is affected greatly by external factors that lowers the accuracy and stability of the detection system.
 % Would be nice to throw in some data from chapter-2
 
 \subsection{Dynamic Nature of Behavioral Data}
 Unlike static credentials, behavioral traits are non-deterministic, which increases the complexity of accurate classification. The variability in human behavior introduces a significant challenge in achieving consistent results. For instance, typing dynamics may differ based on user stress, fatigue, or minor distractions. This variability can compromise the reliability of authentication systems, especially in high-security environments where precision is critical. False positives and false negatives are particularly problematic in behavioral systems.
 % Would be nice to throw in some cases from chapter-2
 
+For example as shown in \ref{subsec:typing-style-using-keystrokes-data}, 
+there is a considerable accuracy differences when comparing subject that type with both hands, and one hand only. 
+They report 89.7\% when typing with both hands, 
+compared to 36.6\% accuracy when they use the left hand and 
+50.4\% accuracy when they use the right hand. 
+Uncontrollable external behavior like this, that makes making a robust behavioral analysis tools a challenge.
+
 \subsection{Usability}
 While behavioral authentication is designed to be seamless and non-intrusive, its implementation can inadvertently introduce usability issues. False rejections caused by behavioral variability may frustate legitimate users. On the other hand, frequent prompts for secondary authentication mechanisms to compensate for behavioral mismatches can disrupt the user experience and reduce overall satisfaction.
+
+In \ref{subsec:continuous-behavioral-biometric-authentication} talks about the importance of 
+two basic requirement for a robust continuous user authentication system. 
+First, it should not disturb the user while its working on the system. 
+Secondly, the system should authenticates the user continuously while the user is working. 
 % Would be nice to throw in some cases from chapter-2
+
+\subsection{Gathering Dataset}
+
+Gathering a robust dataset is a critical step in developing behavioral authentication systems.
+Collecting behavioral data often requires diversity to represent various user demographics, behaviors, and environmental conditions, ensuring the system's reliability across real-world scenarios. 
+Another challenge lies in the volume and quality of data, as long-term observation is often needed to capture the variability of behaviors.
